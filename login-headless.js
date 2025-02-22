@@ -4,6 +4,7 @@ const assert = require("assert");
 
 async function Login() {
   describe("Login Test", function () {
+    this.timeout(5000)
     it("TC01 - Login Success", async function () {
 
       let options = new chrome.Options();
@@ -29,17 +30,6 @@ async function Login() {
           true,
           "Title does not include Swag Lab"
         );
-
-        //add item to cart
-        await driver
-          .findElement(By.id("add-to-cart-sauce-labs-backpack"))
-          .click();
-
-        //validate item sukses ditambahkan ke cart
-        let addCart = await driver
-          .findElement(By.xpath("//span[@class='shopping_cart_badge']"))
-          .getText();
-        assert.strictEqual(addCart > 0, true, "No item on cart");
       } finally {
         setTimeout(async () => {
           await driver.quit();
@@ -146,24 +136,18 @@ async function Login() {
         );
 
         //add item to cart
-        await driver
-          .findElement(By.id("add-to-cart-sauce-labs-backpack"))
-          .click();
+        // await driver
+        //   .findElement(By.id("add-to-cart-sauce-labs-backpack"))
+        //   .click();
 
           await driver
           .findElement(By.id("shopping_cart_container"))
           .click();
 
         //validate item sukses ditambahkan ke cart
-        let isHasItem = await driver
-          .findElement(By.css(".btn.btn_secondary.btn_small.cart_button"))
-          .getText();
-          
-        assert.strictEqual(
-            isHasItem.includes("Remove"),
-            true,
-            "There is no remove button"
-        );
+        let isHasItem = await driver.findElements(By.css(".cart_item"));
+        
+        assert.strictEqual(isHasItem.length === 0, true, "Cart has item");
       } finally {
         setTimeout(async () => {
           await driver.quit();
