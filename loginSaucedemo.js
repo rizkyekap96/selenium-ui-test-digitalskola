@@ -34,7 +34,7 @@ async function Login() {
 
     //validate item sukses ditambahkan ke cart
     let addCart = await driver.findElement(By.xpath("//span[@class='shopping_cart_badge']")).getText();
-    assert.strictEqual(addCart == 0, true, "No item on cart");
+    assert.strictEqual(addCart > 0, true, "No item on cart");
    }
  finally {
     setTimeout(async () => {
