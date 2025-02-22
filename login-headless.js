@@ -31,12 +31,10 @@ async function Login() {
       true,
       "Title does not include Swag Lab"
     );
-    console.log("Login success!")
 
 
     //add item to cart
     await driver.findElement(By.id("add-to-cart-sauce-labs-backpack")).click();
-
 
     //validate item sukses ditambahkan ke cart
     let addCart = await driver.findElement(By.xpath("//span[@class='shopping_cart_badge']")).getText();
