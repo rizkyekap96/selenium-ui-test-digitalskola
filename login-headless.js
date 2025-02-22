@@ -3,7 +3,7 @@ const chrome = require("selenium-webdriver/chrome");
 const assert = require("assert");
 
 async function SauceDemo() {
-  describe("Login Test", function () {
+  describe("saucedemo.com", function () {
     this.timeout(5000)
     it("TC01 - Login Success", async function () {
 

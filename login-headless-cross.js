@@ -5,7 +5,7 @@ const edge = require("selenium-webdriver/edge");
 const assert = require("assert");
 
 async function SauceDemo() {
-  describe("Login Test", function () {
+  describe("saucedemo.com", function () {
     this.timeout(5000);
 
     const browsers = [
