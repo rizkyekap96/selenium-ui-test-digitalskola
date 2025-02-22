@@ -4,7 +4,7 @@ const firefox = require("selenium-webdriver/firefox");
 const edge = require("selenium-webdriver/edge");
 const assert = require("assert");
 
-async function Login() {
+async function SauceDemo() {
   describe("Login Test", function () {
     this.timeout(5000);
 
@@ -92,4 +92,4 @@ async function Login() {
   });
 }
 
-Login();
+SauceDemo();
