@@ -1,1 +1,1 @@
-link recording tugas: https://drive.google.com/drive/folders/1LVEenIMFq-OWBdbpa52xBVZDiIiR6zxA?usp=sharing
+TUGAS DIGITAL SKOLA QA ENGINEER
