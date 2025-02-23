@@ -94,7 +94,7 @@ async function SauceDemo() {
         }, 5000);
       }
       }),
-      it ("TC 04 - Cart no item", async function () {
+      it ("TC 04 - Validate item on cart", async function () {
         this.timeout(10000)
         let options = new chrome.Options();
       options.addArguments("--headless");
@@ -112,9 +112,9 @@ async function SauceDemo() {
         await driver.findElement(By.name("login-button")).click();
 
         //add item to cart
-        // await driver
-        //   .findElement(By.id("add-to-cart-sauce-labs-backpack"))
-        //   .click();
+        await driver
+          .findElement(By.id("add-to-cart-sauce-labs-backpack"))
+          .click();
 
           await driver
           .findElement(By.id("shopping_cart_container"))
@@ -123,7 +123,7 @@ async function SauceDemo() {
         //validate item sukses ditambahkan ke cart
         let isHasItem = await driver.findElements(By.css(".cart_item"));
         
-        assert.strictEqual(isHasItem.length === 0, true, "Cart has item");
+        assert.strictEqual(isHasItem.length > 0, true, "Cart has no item");
       } finally {
         setTimeout(async () => {
           await driver.quit();
