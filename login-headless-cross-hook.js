@@ -82,7 +82,7 @@ async function SauceDemo() {
           await driver.findElement(By.id("password")).sendKeys("secret_sauce");
           await driver.findElement(By.name("login-button")).click();
 
-          await driver.findElement(By.id("shopping_cart_container")).click();
+          //await driver.findElement(By.id("shopping_cart_container")).click();
 
           let cartItems = await driver.findElements(By.css(".cart_item"));
           assert.strictEqual(cartItems.length > 0, true, "Cart no item");
