@@ -1,1 +1,1 @@
-link gdrive: https://drive.google.com/drive/folders/1LVEenIMFq-OWBdbpa52xBVZDiIiR6zxA?usp=sharing
+link gdrive: https://drive.google.com/file/d/14HpHQwl36TsOpK0CTAnGgUBrKgX-6-1R/view?usp=sharing
