@@ -1,6 +1,5 @@
 const { Builder, By, Key, until } = require("selenium-webdriver");
 const assert = require("assert");
-const { elementLocated } = require("selenium-webdriver/lib/until");
 
 async function Login() {
 
