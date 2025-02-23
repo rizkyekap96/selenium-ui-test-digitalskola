@@ -76,7 +76,7 @@ async function SauceDemo() {
           assert.strictEqual(cartItemCount.length > 0, true, "No item in the cart");
         });
 
-        it("TC04 - Cart no item", async function () {
+        it("TC04 - Validate item on cart", async function () {
           await driver.get("https://www.saucedemo.com/");
           await driver.findElement(By.id("user-name")).sendKeys("standard_user");
           await driver.findElement(By.id("password")).sendKeys("secret_sauce");
@@ -85,7 +85,7 @@ async function SauceDemo() {
           await driver.findElement(By.id("shopping_cart_container")).click();
 
           let cartItems = await driver.findElements(By.css(".cart_item"));
-          assert.strictEqual(cartItems.length === 0, false, "Cart should be empty but has items");
+          assert.strictEqual(cartItems.length > 0, true, "Cart no item");
         });
       });
     }
