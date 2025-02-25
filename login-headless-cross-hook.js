@@ -82,7 +82,7 @@ async function SauceDemo() {
           await driver.findElement(By.id("password")).sendKeys("secret_sauce");
           await driver.findElement(By.name("login-button")).click();
 
-          await driver.findElement(By.id("add-to-cart-sauce-labs-backpack")).click();
+          await driver.findElement(By.className("btn btn_primary btn_small btn_inventory")).click();
           await driver.findElement(By.id("shopping_cart_container")).click();
 
           let cartItems = await driver.findElements(By.css(".cart_item"));
