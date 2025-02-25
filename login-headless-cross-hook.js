@@ -1,4 +1,4 @@
-const { Builder, By, Key, until } = require("selenium-webdriver");
+const { Builder, By} = require("selenium-webdriver");
 const chrome = require("selenium-webdriver/chrome");
 const firefox = require("selenium-webdriver/firefox");
 const edge = require("selenium-webdriver/edge");
@@ -11,15 +11,15 @@ async function SauceDemo() {
     const browsers = [
       {
         name: "chrome",
-        options: new chrome.Options().addArguments("--headless"),
+        options: new chrome.Options().addArguments("--headless")
       },
       {
         name: "firefox",
-        options: new firefox.Options().addArguments("--headless"),
+        options: new firefox.Options().addArguments("--headless")
       },
       {
         name: "MicrosoftEdge",
-        options: new edge.Options().addArguments("--headless"),
+        options: new edge.Options().addArguments("--headless")
       },
     ];
 
