@@ -33,7 +33,7 @@ async function saucedemoCheckOut2Test(){
             await loginPage.open("https://saucedemo.com");
         });
 
-        it("TC07 - Finish Checkout item", async function(){
+        it("TC08 - Finish Checkout item", async function(){
             await loginPage.login("standard_user", "secret_sauce");
             await driver.findElement(By.id("add-to-cart-sauce-labs-backpack")).click();
             await driver.findElement(By.id("shopping_cart_container")).click();

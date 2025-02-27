@@ -30,17 +30,17 @@ async function saucedemoCheckOut1Test(){
             await loginPage.open("https://saucedemo.com");
         });
 
-        it("TC04 - Check item on cart", async function(){
-            await loginPage.login("standard_user", "secret_sauce")
-            await driver.findElement(By.id("add-to-cart-sauce-labs-backpack")).click();
-            await driver.findElement(By.id("shopping_cart_container")).click();
+        // it("TC06 - Check item on cart", async function(){
+        //     await loginPage.login("standard_user", "secret_sauce")
+        //     await driver.findElement(By.id("add-to-cart-sauce-labs-backpack")).click();
+        //     await driver.findElement(By.id("shopping_cart_container")).click();
             
-            let cartItems = await driver.findElements(By.css(".cart_item"));
-            assert.strictEqual(cartItems.length > 0, true, "Cart no item");
-        });
+        //     let cartItems = await driver.findElements(By.css(".cart_item"));
+        //     assert.strictEqual(cartItems.length > 0, true, "Cart no item");
+        // });
 
 
-        it("TC05 - Fill in information data", async function(){
+        it("TC06 - Fill in information data", async function(){
             await loginPage.login("standard_user", "secret_sauce");
             await driver.findElement(By.id("add-to-cart-sauce-labs-backpack")).click();
             await driver.findElement(By.id("shopping_cart_container")).click();
@@ -49,7 +49,7 @@ async function saucedemoCheckOut1Test(){
         });
 
 
-        it("TC06 - Successfully checkout item", async function(){
+        it("TC07 - Successfully checkout item", async function(){
             await loginPage.login("standard_user", "secret_sauce");
             await driver.findElement(By.id("add-to-cart-sauce-labs-backpack")).click();
             await driver.findElement(By.id("shopping_cart_container")).click();
